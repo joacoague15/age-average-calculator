@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/joacoague15/age-average-calculator/static/css/main.ea02cfbd.css",
+    "main.js": "/joacoague15/age-average-calculator/static/js/main.3b462c2e.js",
+    "index.html": "/joacoague15/age-average-calculator/index.html",
+    "main.ea02cfbd.css.map": "/joacoague15/age-average-calculator/static/css/main.ea02cfbd.css.map",
+    "main.3b462c2e.js.map": "/joacoague15/age-average-calculator/static/js/main.3b462c2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea02cfbd.css",
+    "static/js/main.3b462c2e.js"
+  ]
+}
