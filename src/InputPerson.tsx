@@ -44,7 +44,10 @@ const InputPerson: React.FC<InputPersonProps> = ({ persons, setPersons }) => {
                 <input
                     type="number"
                     value={age}
-                    onChange={e => setAge(e.target.value)}
+                    onChange={e => {
+                        if (parseInt(e.target.value, 10) < 0) return;
+                        setAge(e.target.value);
+                    }}
                     className="input"
                 />
             </div>
