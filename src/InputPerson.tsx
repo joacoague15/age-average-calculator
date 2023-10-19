@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles.css';
 
 type Person = {
     name: string;
@@ -28,30 +29,32 @@ const InputPerson: React.FC<InputPersonProps> = ({ persons, setPersons }) => {
     };
 
     return (
-        <div>
-            <div>
-                <label>Name: </label>
+        <div className="container">
+            <div className="inputGroup">
+                <label className="label">Name</label>
                 <input
                     type="text"
                     value={name}
                     onChange={e => setName(e.target.value)}
+                    className="input"
                 />
             </div>
-            <div>
-                <label>Age: </label>
+            <div className="inputGroup">
+                <label className="label">Age</label>
                 <input
                     type="number"
                     value={age}
                     onChange={e => setAge(e.target.value)}
+                    className="input"
                 />
             </div>
-            <button onClick={handleAddPerson}>Add Person</button>
+            <button className="button" onClick={handleAddPerson}>Add Person</button>
 
             <div>
-                <h3>People List:</h3>
-                <ul>
+                <h3 className="listHeader">People List:</h3>
+                <ul className="list">
                     {persons.map((person, index) => (
-                        <li key={index}>
+                        <li className="listItem" key={index}>
                             {person.name} - {person.age ? person.age : 'No Age Provided'}
                         </li>
                     ))}

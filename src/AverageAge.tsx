@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import './styles.css';
 
 type Person = {
     name: string;
@@ -50,9 +51,13 @@ const AverageAge: React.FC<AverageAgeProps> = ({ data }) => {
     }, [averageAge])
 
     return (
-        <div>
-            {data.length > 0 ? `Average age is: ${averageAge}` : 'No person added yet'}
-            {ageImage && <img src={ageImage} alt="age" />}
+        <div className="mainAgeContainer">
+            <div className="ageContainer">
+                <div className="text">
+                    {data.length > 0 ? `Average age is: ${averageAge}` : 'No person added yet'}
+                </div>
+                {ageImage && <img src={ageImage} alt="age" className="image" />}
+            </div>
         </div>
     );
 };
